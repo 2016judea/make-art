@@ -50,6 +50,15 @@ it's repainted. The prompts are the interesting part anyway.
 
 The essay these were made for: [The Consciousness Line](https://aidanjude.vercel.app/substack/consciousness-line).
 
+## From script to video
+
+Plates are half the studio. [`script-to-video.md`](script-to-video.md) is the
+other half: the full open-tool chain that turns a written episode into a
+YouTube video on one Mac — narration, deterministic terminal footage
+([`examples/terminal-replay/`](examples/terminal-replay/)), canvas animation,
+ffmpeg assembly, captions, publish. Every choice carries its why; every
+rejected tool carries its disqualifying fact.
+
 ## Contributing
 
 Issues and PRs welcome. Useful directions: the border/luminance probe as a
