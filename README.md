@@ -1,0 +1,61 @@
+# make-art
+
+One Python file, and a skill that teaches Claude Code to art-direct it.
+
+The engine is Gemini 3 Pro Image ("Nano Banana Pro") over the REST API. No SDK,
+no dependencies — `gen_art.py` is stdlib only. Native output up to 4K, ~35
+seconds a plate, about $0.24 each.
+
+## Quickstart
+
+```bash
+export GEMINI_API_KEY=...            # or GEMINI_API_KEY=... in a .env beside gen_art.py
+python3 gen_art.py --prompt "..." --out plate.png --aspect 3:4 --size 2K
+python3 gen_art.py --image base.png --prompt "..." --out out.png   # edit/compose around a base
+```
+
+`--aspect`: `1:1 2:3 3:2 3:4 4:3 4:5 5:4 9:16 16:9 21:9` · `--size`: `1K / 2K / 4K` (uppercase).
+Draft at 2K, spend 4K when it's right.
+
+## The two things that will bite you
+
+1. **The model renders text unreliably.** Generate a text-free image and lay the
+   type on yourself (HTML→screenshot, or PIL). End every prompt with *"no text,
+   no lettering, no words anywhere in the image."*
+2. **It invents borders — and worse.** A pale riso frame, a dark slide mount,
+   and once a signature: *© 1962 A.M. Cassandre*, a real poster artist, forged
+   onto a plate nobody asked him to sign. Probe the edges, check the corners,
+   before anything ships.
+
+## The skill
+
+[`skill/SKILL.md`](skill/SKILL.md) is the working Claude Code skill, verbatim.
+Drop it in `~/.claude/skills/make-art/` (with `gen_art.py` in `scripts/`) and
+Claude drives the engine itself — picks aspect and size, writes the prompt,
+probes the border. [`skill/image-riff.md`](skill/image-riff.md) is the method
+layer on top: one reference image → a spread of original plates in its own
+visual language.
+
+Both files reference paths and albums from the machine they live on. That's the
+point — a skill is harvested from real sessions, not authored in the abstract.
+Adapt the paths, keep the rules.
+
+## The example: The Consciousness Line
+
+Six prompts, one per compound — 1950s magazine advertising in the Mad Men
+register, each an ordinary post-war moment opening into what the drug does.
+[`examples/consciousness-line/`](examples/consciousness-line/). Five plates
+included; the LSD plate is the one the model signed, and it stays out until
+it's repainted. The prompts are the interesting part anyway.
+
+The essay these were made for: [The Consciousness Line](https://aidanjude.vercel.app/substack/consciousness-line).
+
+## Contributing
+
+Issues and PRs welcome. Useful directions: the border/luminance probe as a
+standalone script, more worked examples with their full prompt sets, ports of
+the skill to other agent harnesses.
+
+## License
+
+Code MIT. Plates and prompts CC BY 4.0.
