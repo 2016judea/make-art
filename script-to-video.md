@@ -81,6 +81,22 @@ weekly: file the audit first, then automate (porjo/youtubeuploader, or the
 no-audit hybrid — manual upload plus API `thumbnails.set` / `captions.insert`,
 which carry no lock).
 
+## Who the viewer is
+
+Learned from the first pilot (2026-08-24, Aidan's reaction verbatim: "Reads
+like its built for a developer. Anyone can fork these things with AI now
+(Claude Code). That should be baked into this somehow"):
+
+The viewer is not assumed to be a developer. They have an AI agent, and the
+wall between watching and having is one sentence they can paste. So the format
+closes the loop it opens: the video begins with the builder's original prompt
+and ends with **the viewer's** — a fork prompt on the end card, plain
+language, one line ("clone this repo and make it mine — my city, my voice, my
+cards"). Use-it instructions lead with that lane; raw commands stay
+underneath for the terminal crowd. Copy on every card passes the plain-
+language test — the terminal footage is the story, but the words around it
+must not gatekeep.
+
 ## Dead ends, with the disqualifying fact
 
 | tool | the fact |
