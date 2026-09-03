@@ -50,6 +50,18 @@ it's repainted. The prompts are the interesting part anyway.
 
 The essay these were made for: [The Consciousness Line](https://aidanjude.vercel.app/substack/consciousness-line).
 
+## The persona: Leonardo
+
+[`skill/leonardo.md`](skill/leonardo.md) is a third layer on the same engine: a fixed visual
+language with six material modes — pen and ink, a codex page, red chalk, silverpoint on a
+prepared ground, tempera on linen, the Deluge — each measured off two or three of Leonardo's
+real sheets and anchored on them at generation time. The full skill folder (the fifteen
+public-domain anchor sheets, his notebooks complete in Richter's arrangement, the prompt
+STEMs, and `plate.py`) lives in the Claude config; this copy is the method. The grounding
+run — four subjects, the losing rolls, and the three engine failures they exposed (it mirrors
+your own prompt as "mirror script"; it hatches right-handed; it draws cartoon foliage) — is
+in [`examples/leonardo/`](examples/leonardo/).
+
 ## From script to video
 
 Plates are half the studio. [`script-to-video.md`](script-to-video.md) is the
