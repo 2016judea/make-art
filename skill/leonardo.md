@@ -32,7 +32,7 @@ Read off `sheets/`, 2026-09-03. Every STEM in `prompts/` is a paraphrase of this
   drawn with its casing gone. His way of explaining a thing is to cut it.
 - **Motion as hair.** Water, cloud, smoke, wind are nested spirals of dozens of fine parallel
   arcs (the Deluge). Hair and beard are long rhythmic waves (Turin self-portrait).
-- **Five material modes**, and they don't mix on one sheet:
+- **Six material modes**, and they don't mix on one sheet:
   | mode | what it is | the anchor sheets |
   |---|---|---|
   | `ink` | pen + brown iron-gall ink over faint black chalk, brown wash in the deep shadow; the anatomy and machine sheets | shoulder, fetus, flying machine |
@@ -84,7 +84,7 @@ The SUBJECT that works is a *list of studies on one sheet*, each with its scale 
 smaller studies — A alone, B in section, C seen from below; a tiny diagram in the corner
 showing Z, points lettered a, b, c." Write a picture ("an espresso machine on a table") and
 you get an illustration on old paper, which is the standard failure. The four subjects from
-the grounding run are in `examples/` verbatim.
+the grounding run are in `~/Desktop/make-art/examples/leonardo/prompts/` verbatim.
 
 Draft at `2K` (~$0.13); spend `4K` only on the pick. Sandbox **off** for every call — the
 engine needs the network (`make-art`).
