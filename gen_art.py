@@ -25,15 +25,23 @@ def load_key():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--prompt")
-    ap.add_argument("--prompt-file")
+    src = ap.add_mutually_exclusive_group(required=True)
+    src.add_argument("--prompt")
+    src.add_argument("--prompt-file")
     ap.add_argument("--image", action="append", default=[])  # base image(s) to anchor/edit around
     ap.add_argument("--out", required=True)
     ap.add_argument("--aspect", default="3:2")   # 3:2 ~ full spread; 3:4 ~ single page
     ap.add_argument("--size", default="4K")       # 1K / 2K / 4K  (uppercase required)
     args = ap.parse_args()
 
+    if args.prompt_file and not pathlib.Path(args.prompt_file).is_file():
+        sys.exit(f"--prompt-file {args.prompt_file}: no such file")
     prompt = args.prompt or pathlib.Path(args.prompt_file).read_text()
+    if not prompt.strip():
+        sys.exit("the prompt is empty")
+    for img in args.image:
+        if not pathlib.Path(img).is_file():
+            sys.exit(f"--image {img}: no such file")
     parts = []
     for img in args.image:
         p = pathlib.Path(img)
