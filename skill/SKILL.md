@@ -6,7 +6,7 @@ grounded: 2026-08-21 — four 9:16 4K plates anchored on a pasted Moebius panel,
 
 # make-art — Aidan's working AI-image engine
 
-The engine is **Nano Banana Pro = Gemini 3 Pro Image** (`gemini-3-pro-image-preview`) via the Gemini REST API. A zero-dependency, stdlib-only wrapper lives at `scripts/gen_art.py` (in this skill folder). It reads `GEMINI_API_KEY` from `~/Desktop/bricks/.env`. Native output up to 4K, ~35s per image, ~$0.24 per 4K image.
+The engine is **Nano Banana Pro = Gemini 3 Pro Image** (`gemini-3-pro-image-preview`) via the Gemini REST API. A zero-dependency, stdlib-only wrapper lives at `scripts/gen_art.py` (in this skill folder). It reads `GEMINI_API_KEY` from `~/Desktop/workspace/bricks/.env`. Native output up to 4K, ~35s per image, ~$0.24 per 4K image.
 
 **Do NOT use the local `mflux` / Z-Image path** — that was an abandoned experiment (removed 2026-07-15). This API engine is the real one.
 
@@ -32,7 +32,7 @@ lives only as base64 in the session transcript. Don't search `~/Downloads`, `~/D
 
 ```python
 import json, base64, pathlib
-p = pathlib.Path.home() / ".claude/projects/<slug>/<sessionId>.jsonl"   # slug e.g. -Users-aidan-Desktop-bricks
+p = pathlib.Path.home() / ".claude/projects/<slug>/<sessionId>.jsonl"   # slug e.g. -Users-aidan-Desktop-workspace-bricks
 for line in p.open():
     for blk in (json.loads(line).get("message") or {}).get("content") or []:
         if isinstance(blk, dict) and blk.get("type") == "image":

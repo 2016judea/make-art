@@ -84,7 +84,7 @@ The SUBJECT that works is a *list of studies on one sheet*, each with its scale 
 smaller studies — A alone, B in section, C seen from below; a tiny diagram in the corner
 showing Z, points lettered a, b, c." Write a picture ("an espresso machine on a table") and
 you get an illustration on old paper, which is the standard failure. The four subjects from
-the grounding run are in `~/Desktop/make-art/examples/leonardo/prompts/` verbatim.
+the grounding run are in `~/Desktop/workspace/make-art/examples/leonardo/prompts/` verbatim.
 
 Draft at `2K` (~$0.13); spend `4K` only on the pick. Sandbox **off** for every call — the
 engine needs the network (`make-art`).
@@ -158,5 +158,5 @@ not instructing — the fables, the prophecies, the letters asking to be paid �
 - `sheets/CREDITS.md` — provenance of the fifteen anchors; all public domain, fetched from
   Wikimedia Commons 2026-09-03; `meta.json` is the raw record.
 - `corpus/INDEX.md` — the twenty-two books, word counts, what is Leonardo and what is Richter.
-- The published copy of this skill lives in `~/Desktop/make-art/skill/leonardo.md` with the
+- The published copy of this skill lives in `~/Desktop/workspace/make-art/skill/leonardo.md` with the
   grounding run's prompts and plates under `examples/leonardo/`.
